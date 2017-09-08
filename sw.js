@@ -1,6 +1,6 @@
 'use strict';
 
-self.importScripts('node_modules/sw-toolbox/sw-toolbox.js');
+self.importScripts('./node_modules/sw-toolbox/sw-toolbox.js');
 
 self.toolbox.precache(['index.html']);
 

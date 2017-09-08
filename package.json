@@ -1,0 +1,23 @@
+{
+  "name": "pwa01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lighthouse-dev": "lighthouse http://localhost:5000 --output-path='./lighthouse-results.html' --view",
+    "lighthouse-prod": "lighthouse https://metasean.github.io/learning-pwa01/index.html --output-path='./lighthouse-results.html' --view"
+  },
+  "keywords": [],
+  "author": "metasean",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "lighthouse": "^2.4.0",
+    "local-web-server": "^2.2.4",
+    "serve": "^6.0.6",
+    "sw-toolbox": "^3.6.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}

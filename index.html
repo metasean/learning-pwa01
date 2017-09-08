@@ -8,15 +8,16 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('./sw.js', { scope: './' }).then(
+          /* navigator.serviceWorker.register('./sw.js', { scope: './' }).then( */
+          navigator.serviceWorkerContainer.register('./sw.js', { scope: './' }).then(
             console.log('sw.js is supposedly registered'),
             function(registration) {
-              // Registration was successful
+              /* Registration was successful */
               console.log('ServiceWorker registration successful with: ', registration);
               console.log('ServiceWorker registration successful with scope: ', registration.scope);
             },
             function(err) {
-              // registration failed :(
+              /* registration failed :( */
               console.log('ServiceWorker registration failed: ', err);
             }
           )

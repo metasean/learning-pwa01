@@ -9,18 +9,25 @@
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           /* navigator.serviceWorker.register('./sw.js', { scope: './' }).then( */
-          navigator.serviceWorker.register('./sw.js', { scope: './' }).then(
-            console.log('sw.js is supposedly registered'),
-            function(registration) {
-              /* Registration was successful */
-              console.log('ServiceWorker registration successful with: ', registration);
-              console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            },
-            function(err) {
-              /* registration failed :( */
-              console.log('ServiceWorker registration failed: ', err);
-            }
-          )
+          navigator.serviceWorker
+            .register('./sw.js', { scope: './' })
+            .then(
+              console.log('sw.js is supposedly registered'),
+              function(registration) {
+                /* Registration was successful */
+                console.log('ServiceWorker registration successful with: ', registration);
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              },
+              function(err) {
+                /* registration failed :( */
+                console.log('ServiceWorker registration failed: ', err);
+              }
+            )
+            .catch(
+              function(err) {
+                console.log('ServiceWorker registration caught error: ', err);
+              }
+            )
         })
       }
     </script>

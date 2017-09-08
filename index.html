@@ -12,7 +12,6 @@
           navigator.serviceWorker
             .register('./learning-pwa01/sw.js', { scope: './learning-pwa01/' })
             .then(
-              console.log('sw.js is supposedly registered'),
               function(registration) {
                 /* Registration was successful */
                 console.log('ServiceWorker registration successful with: ', registration);
